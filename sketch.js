@@ -70,7 +70,9 @@ function feedDog(){
 
 function addFoods(){
   foodS++;
+  dog.addImage(dImg);
   foodObj.updateFoodStock(foodObj.getFoodStock()+1)
+
   database.ref('/').update({
     Food:foodObj.getFoodStock()
   })
